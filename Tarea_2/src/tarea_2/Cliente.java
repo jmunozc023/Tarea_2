@@ -35,7 +35,6 @@ public class Cliente extends Persona {
         System.out.println("Ingrese el correo electronico del cliente: ");
         String cor = scanner.nextLine();
         super.setCorreo(cor);
-        scanner.close(); // Cerrar el scanner al finalizar
     }
 
     public void imprimir() {

@@ -11,10 +11,17 @@ import java.util.Scanner;
  * @author josep
  */
 public class Tarea_2 {
+
     Scanner scanner = new Scanner(System.in);
-    int opcion= 0;
-    public void menuPrincipal(){
-        do {
+    String nombre = "", apellido = "", direccion = "", correo = "";
+    int telefono = 0;
+    Cliente cliente = new Cliente(nombre, apellido, telefono, direccion, correo);
+    int opcion = 0;
+    public String[] meses;
+    Meses mes = new Meses();
+
+    public void menuPrincipal() {
+        do { //Menu principal
             System.out.println("----- MENÚ PRINCIPAL -----");
             System.out.println("1. Crear Cliente");
             System.out.println("2. Mostrar meses");
@@ -24,13 +31,18 @@ public class Tarea_2 {
 
             switch (opcion) {
                 case 1:
-                    // Lógica para crear un Cliente
-                    
-                   
+                    // Constructores de clase Cliente
+                    cliente.crearCliente();
+                    cliente.imprimir();
                     break;
                 case 2:
                     // Lógica para Mostrar los meses
-                    
+                    mes.ingresarMeses();
+                    mes.mostrarMeses();
+                    break;
+                case 3:
+                    // Lógica para Mostrar los meses
+                    System.out.println("Saliendo del sistema...");
                     break;
                 default:
                     System.out.println("Opción inválida. Intente nuevamente.");
@@ -41,15 +53,10 @@ public class Tarea_2 {
 
         scanner.close();
     }
-    
 
     public static void main(String[] args) {
-        String nombre="", apellido="", direccion="", correo="";
-        int telefono=0;
-        Cliente cliente = new Cliente(nombre, apellido, telefono, direccion, correo);
-        cliente.crearCliente();
-        cliente.imprimir();
+        Tarea_2 tarea2 = new Tarea_2();
+        tarea2.menuPrincipal();
     }
-        
-    
+
 }
