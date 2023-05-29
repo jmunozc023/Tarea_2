@@ -10,15 +10,15 @@ import java.util.Scanner;
  *
  * @author josep
  */
-public class Cliente extends Persona {
+public class Cliente extends Persona { // Creacion de clase Cliente que hereda de Persona todos sus atributos y no añade ninguno adicional
 
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in); 
 
     public Cliente(String nombre, String apellido, int telefono, String direccion, String correo) {
         super(nombre, apellido, telefono, direccion, correo);
     }
 
-    public void crearCliente() {
+    public void crearCliente() { //Clase dedicada para crear el objeto cliente
         System.out.println("Ingrese el nombre del cliente: ");
         String nom = scanner.nextLine();
         super.setNombre(nom);
@@ -28,7 +28,8 @@ public class Cliente extends Persona {
         System.out.println("Ingrese el telefono del cliente: ");
         int tel = scanner.nextInt();
         super.setTelefono(tel);
-        scanner.nextLine(); // Limpiar el búfer de entrada
+        scanner.nextLine(); /* Esta linea ayuda a solventar el error de que se salta los demas scanner. 
+        Limpia cualquier caracter o String en el scanner para continuar con el resto del codigo*/
         System.out.println("Ingrese la dirección del cliente: ");
         String dir = scanner.nextLine();
         super.setDireccion(dir);
@@ -37,7 +38,7 @@ public class Cliente extends Persona {
         super.setCorreo(cor);
     }
 
-    public void imprimir() {
+    public void imprimir() { //Funcion para imprimir el Cliente creado
         System.out.println("Nombre: " + super.getNombre());
         System.out.println("Apellido: " + super.getApellido());
         System.out.println("Teléfono: " + super.getTelefono());

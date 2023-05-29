@@ -8,13 +8,14 @@ package tarea_2;
  *
  * @author josep
  */
-public class Persona {
+public class Persona { //Clase padre de Persona con atributos de nombre, apellido, telefono, direccion y correo
     private String nombre;
     private String apellido;
     private int telefono;
     private String direccion;
     private String correo;
-
+    /*Creacion de los constructores normales de la clase y sus respectivos getter y setter.
+    Se habia incluido anteriormente un metodo toString pero no funciono y fue eliminado *** consultar al profe**** */
     public Persona(String nombre, String apellido, int telefono, String direccion, String correo) {
         this.nombre = nombre;
         this.apellido = apellido;

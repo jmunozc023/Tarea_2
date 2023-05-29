@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author josep
  */
-public class Tarea_2 {
+public class Tarea_2 { //Declaracion de variables universales que seran utilizadas por el codigo
 
     Scanner scanner = new Scanner(System.in);
     String nombre = "", apellido = "", direccion = "", correo = "";
@@ -20,7 +20,7 @@ public class Tarea_2 {
     public String[] meses;
     Meses mes = new Meses();
 
-    public void menuPrincipal() {
+    public void menuPrincipal() { //Metodo de menu principal con sus respectivas opciones y constructores de las clases.
         do { //Menu principal
             System.out.println("----- MENÚ PRINCIPAL -----");
             System.out.println("1. Crear Cliente");
@@ -36,15 +36,15 @@ public class Tarea_2 {
                     cliente.imprimir();
                     break;
                 case 2:
-                    // Lógica para Mostrar los meses
+                    // Constructores de la clase Meses
                     mes.ingresarMeses();
                     mes.mostrarMeses();
                     break;
                 case 3:
-                    // Lógica para Mostrar los meses
+                    // Opcion de salida del ciclo
                     System.out.println("Saliendo del sistema...");
                     break;
-                default:
+                default: // Opcion en caso de ingresar un valor invalido
                     System.out.println("Opción inválida. Intente nuevamente.");
                     break;
             }
@@ -55,7 +55,7 @@ public class Tarea_2 {
     }
 
     public static void main(String[] args) {
-        Tarea_2 tarea2 = new Tarea_2();
+        Tarea_2 tarea2 = new Tarea_2();// Constructor de la clase menuPrincipal
         tarea2.menuPrincipal();
     }
 
