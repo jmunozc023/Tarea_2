@@ -44,7 +44,12 @@ public class Tarea_2 {
     
 
     public static void main(String[] args) {
-        
+        String nombre="", apellido="", direccion="", correo="";
+        int telefono=0;
+        Cliente cliente = new Cliente(nombre, apellido, telefono, direccion, correo);
+        cliente.crearCliente();
+        cliente.imprimir();
     }
+        
     
 }
