@@ -24,12 +24,12 @@ public class Tarea_2 {
 
             switch (opcion) {
                 case 1:
-                    // Lógica para crear un dependiente
+                    // Lógica para crear un Cliente
                     
                    
                     break;
                 case 2:
-                    // Lógica para crear un ingeniero
+                    // Lógica para Mostrar los meses
                     
                     break;
                 default:
@@ -37,14 +37,14 @@ public class Tarea_2 {
                     break;
             }
             System.out.println();
-        } while (opcion != 5);
+        } while (opcion != 3);
 
         scanner.close();
     }
     
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
     
 }
